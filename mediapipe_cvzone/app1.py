@@ -19,16 +19,17 @@ cx,cy,w,h = 100,100,200,200
 detector = HandDetector(detectionCon=0.8)
 while True:
     succ, img = cap.read()
-    #img = cv2.flip(img,1)
+    img = cv2.flip(img,1)
     _,img = detector.findHands(img)
     lmList = detector.findPosition(img)
     
     if lmList:
-        point1 = lmList[8][1], lmList[8][2]
+        point1 = lmList[8][1], lmList[8][2]  #( first, second) { } [  ]
         point2 = lmList[12][1], lmList[12][2]
+        print(lmList)
         #print(point1, point2)
         len,_,_ = detector.findDistance(point1,point2,img)
-        print(len)
+        #print(len)
         cursor = lmList[8]
         #print(cursor)
         #print(img.shape)
