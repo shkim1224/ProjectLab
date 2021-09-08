@@ -4,8 +4,9 @@ import numpy as np
 import handtrackingmodule as htm
 import math
 from ctypes import cast, POINTER
-from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
+from comtypes import CLSCTX_ALL  # pip install comtypes==1.1.4
+
 ################################
 wCam, hCam = 640, 480
 ################################

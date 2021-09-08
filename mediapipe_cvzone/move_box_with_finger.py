@@ -11,8 +11,8 @@ from cvzone.HandTrackingModule import HandDetector
 # 상기의 사이트에서 def findPostion(_) method를 카피하여 HandTrackingmodule.py에 복사
 
 cap = cv2.VideoCapture(0)
-cap.set(3,1280)
-cap.set(4,720)
+cap.set(3,640)
+cap.set(4,480)
 colorR = (255,0,255)
 cx,cy,w,h = 100,100,200,200
 
